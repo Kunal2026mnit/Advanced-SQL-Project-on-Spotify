@@ -96,7 +96,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       from spotify
       group by artist
       order by 2 desc;
-   ```
+      ```
 
 **Medium Level**
 1. **Calculate the average danceability of tracks in each album.**
@@ -152,7 +152,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
       ```sql
       with ranking_artist as
-(
+      (
 select artist,
 track,
 sum(views) as total_views,
@@ -162,8 +162,7 @@ group by 1,2
 order by 1,3 desc)
 select * from ranking_artist
 where rank <=3;
-
-    ```
+```
 2. **Write a query to find tracks where the liveness score is above the average.**
       ```sql
       select track, artist,liveness from spotify
