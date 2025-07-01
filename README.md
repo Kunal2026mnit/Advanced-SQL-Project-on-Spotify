@@ -111,11 +111,11 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       ```sql
       select track,--1
        max(energy) as top_5_energy --2
-from spotify
-group by track
-order by 2 desc
-limit 5;
-    ```
+      from spotify
+      group by track
+      order by 2 desc
+      limit 5;
+      ```
 3. **List all tracks along with their views and likes where `official_video = TRUE`.**
       ```sql
       select track, --1
