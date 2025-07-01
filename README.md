@@ -260,7 +260,7 @@ order by stream desc limit 25;
         - Execution time (E.T.): **0.366 ms**
         - Planning time (P.T.): **0.244 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
-      ![EXPLAIN After Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/a73708ce7265f2af0940b72fb84a8346126997fc/spotify_explain_after_index.png)
+      ![EXPLAIN After Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/4074e5e6fe1fc63ce790eb06239063dedece6989/after%20index.png)
 
 - **Graphical Performance Comparison**
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
