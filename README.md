@@ -265,7 +265,7 @@ order by stream desc limit 25;
 - **Graphical Performance Comparison**
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
-      ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/e1239cad28cc9d9b9accb624b20b08f4bf373962/spotify_graphical%20view%203.png)
+      ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/3b32aa62d4e1386df524ffa5944c1f971a296f27/analyze%20after%20index.png))
       ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/5497ed759ec49c0d371b889720d14ee286cde09e/spotify_graphical%20view%202.png)
       ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/11e12f939c2d819abd38e226e849aeb087e91f4d/spotify_graphical%20view%201.png)
 
