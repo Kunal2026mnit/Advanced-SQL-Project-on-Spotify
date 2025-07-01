@@ -66,7 +66,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ## 15 Practice Questions
 
-### Easy Level
+**Easy Level**
 1. **Retrieve the names of all tracks that have more than 1 billion streams.**
    ```sql
    select track from spotify
@@ -98,7 +98,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       order by 2 desc;
    ```
 
-### Medium Level
+**Medium Level**
 1. **Calculate the average danceability of tracks in each album.**
       ```sql
       select album,--1
@@ -148,7 +148,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
        streamed_on_youtube<> 0;
    ```
 
-### Advanced Level
+**Advanced Level**
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
       ```sql
       with ranking_artist as
