@@ -242,7 +242,7 @@ To improve query performance, we carried out the following optimization process:
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
       ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/e1239cad28cc9d9b9accb624b20b08f4bf373962/spotify_graphical%20view%203.png)
-      ![Performance Graph](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_graphical%20view%202.png)
+      ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/5497ed759ec49c0d371b889720d14ee286cde09e/spotify_graphical%20view%202.png)
       ![Performance Graph](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_graphical%20view%201.png)
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
