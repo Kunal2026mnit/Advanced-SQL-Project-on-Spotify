@@ -153,23 +153,22 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       ```sql
       with ranking_artist as
       (
-select artist,
-track,
-sum(views) as total_views,
-dense_rank() over(partition by artist order by sum(views)desc) as rank
-from spotify
-group by 1,2
-order by 1,3 desc)
-select * from ranking_artist
-where rank <=3;
-```
+      select artist,
+      track,
+      sum(views) as total_views,
+      dense_rank() over(partition by artist order by sum(views)desc) as rank
+      from spotify
+      group by 1,2
+      order by 1,3 desc)
+      select * from ranking_artist
+      where rank <=3;
+      ```
 2. **Write a query to find tracks where the liveness score is above the average.**
-      ```sql
+```sql
       select track, artist,liveness from spotify
 where liveness > (select avg(liveness) from spotify)
 order by 3 desc;
- 
-    ```
+```
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
    ```sqlwith T1 as 
 (
