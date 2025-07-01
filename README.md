@@ -218,12 +218,24 @@ FROM
 To improve query performance, we carried out the following optimization process:
 
 - **Initial Query Performance Analysis Using `EXPLAIN`**
+```sql
+  explain analyze
+Select 
+artist,
+track,
+views
+from spotify
+where artist = 'Gorillaz'
+and 
+most_played_on = 'Youtube'
+order by stream desc limit 25;
+```
     - We began by analyzing the performance of a query using the `EXPLAIN` function.
     - The query retrieved tracks based on the `artist` column, and the performance metrics were as follows:
-        - Execution time (E.T.): **7 ms**
-        - Planning time (P.T.): **0.17 ms**
+        - Execution time (E.T.): **10.827 ms**
+        - Planning time (P.T.): **0.203 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
-      ![EXPLAIN Before Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/35a94f6303aff11e0fd70fc38a45182083bd8083/spotify_explain_before_index.png)
+      ![EXPLAIN Before Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/5a40195666eefbe1d7cd22d7f52d89ff713150d0/before%20index.png)
 
 - **Index Creation on the `artist` Column**
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
