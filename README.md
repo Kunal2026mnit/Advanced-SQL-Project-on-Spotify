@@ -235,7 +235,7 @@ order by stream desc limit 25;
         - Execution time (E.T.): **10.827 ms**
         - Planning time (P.T.): **0.203 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
-      ![EXPLAIN Before Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/5a40195666eefbe1d7cd22d7f52d89ff713150d0/before%20index.png)
+      ![EXPLAIN Before Index]
 
 - **Index Creation on the `artist` Column**
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
