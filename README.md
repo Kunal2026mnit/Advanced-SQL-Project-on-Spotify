@@ -230,24 +230,35 @@ and
 most_played_on = 'Youtube'
 order by stream desc limit 25;
 ```
+ **Performance Analysis before Index Creation**
     - We began by analyzing the performance of a query using the `EXPLAIN` function.
     - The query retrieved tracks based on the `artist` column, and the performance metrics were as follows:
         - Execution time (E.T.): **10.827 ms**
         - Planning time (P.T.): **0.203 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
-      ![EXPLAIN Before Index]
+      ![EXPLAIN Before Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/9b49e183ebb665c2a49eb8a6e5f6447e509ba2db/before%20index.png)
 
 - **Index Creation on the `artist` Column**
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
     - **SQL command** for creating the index:
-      ```sql
-      CREATE INDEX idx_artist ON spotify_tracks(artist);
-      ```
+```sql
+      CREATE INDEX idx_artist ON spotify_tracks(artist)
+      explain analyze
+Select 
+artist,
+track,
+views
+from spotify
+where artist = 'Gorillaz'
+and 
+most_played_on = 'Youtube'
+order by stream desc limit 25;
+```
 
 - **Performance Analysis After Index Creation**
     - After creating the index, we ran the same query again and observed significant improvements in performance:
-        - Execution time (E.T.): **0.153 ms**
-        - Planning time (P.T.): **0.152 ms**
+        - Execution time (E.T.): **0.366 ms**
+        - Planning time (P.T.): **0.244 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
       ![EXPLAIN After Index](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/a73708ce7265f2af0940b72fb84a8346126997fc/spotify_explain_after_index.png)
 
