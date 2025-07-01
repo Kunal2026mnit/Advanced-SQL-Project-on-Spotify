@@ -92,7 +92,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
        ```sql
        select 
        artist,--1
-	  count(*) as total_no_of_songs--2
+       count(*) as total_no_of_songs--2
        from spotify
        group by artist
        order by 2 desc;
