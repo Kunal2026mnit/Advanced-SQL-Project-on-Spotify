@@ -92,21 +92,21 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
        ```sql
        select 
       artist,--1
-	  count(*) as total_no_of_songs--2
-from spotify
-group by artist
-order by 2 desc;
+      count(*) as total_no_of_songs--2
+      from spotify
+      group by artist
+      order by 2 desc;
        ```
 
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
       ```sql
       select album,--1
-avg(danceability) as average_danceability --2
-from spotify
-group by album
-order by 2 desc;
-    ```
+      avg(danceability) as average_danceability --2
+      from spotify
+      group by album
+      order by 2 desc;
+      ```
 2. **Find the top 5 tracks with the highest energy values.**
       ```sql
       select track,--1
