@@ -96,7 +96,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       from spotify
       group by artist
       order by 2 desc;
-       ```
+   ```
 
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
@@ -119,35 +119,34 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 3. **List all tracks along with their views and likes where `official_video = TRUE`.**
       ```sql
       select track, --1
-sum(views) as total_views,--2
-sum(likes) as total_likes from spotify --3
-where official_video = 'True'
-group by 1
-order by 2 desc;
-
-    ```
+      sum(views) as total_views,--2
+      sum(likes) as total_likes from spotify --3
+      where official_video = 'True'
+      group by 1
+      order by 2 desc;
+      ```
 4. **For each album, calculate the total views of all associated tracks.**
       ```sql
       select album,--1
-track,--2
-sum(views) as total_views--3
-from spotify
-group by 1,2
-order by 3 desc;
-    ```
+      track,--2
+      sum(views) as total_views--3
+      from spotify
+      group by 1,2
+      order by 3 desc;
+      ```
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
        ```sql
        SELECT * FROM
-(select track,
+       (select track,
        coalesce(sum(case when most_played_on = 'Youtube' then stream end),0) as streamed_on_youtube,
 	   coalesce(sum(case when most_played_on = 'Spotify' then stream end),0) as streamed_spotify
-from spotify
-group by 1
-) AS TI
-WHERE streamed_spotify > streamed_on_youtube
-AND 
-streamed_on_youtube<> 0 ;
-    ```
+       from spotify
+       group by 1
+       ) AS TI
+       WHERE streamed_spotify > streamed_on_youtube
+       AND 
+       streamed_on_youtube<> 0;
+   ```
 
 ### Advanced Level
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
