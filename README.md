@@ -266,7 +266,7 @@ order by stream desc limit 25;
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
       ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/3b32aa62d4e1386df524ffa5944c1f971a296f27/analyze%20after%20index.png))
-      ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/5497ed759ec49c0d371b889720d14ee286cde09e/spotify_graphical%20view%202.png)
+      ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/fee6e78d53642a71b0753f8284da8e6ac456416f/graph%20before%20inddex.png)
       ![Performance Graph](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/11e12f939c2d819abd38e226e849aeb087e91f4d/spotify_graphical%20view%201.png)
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
