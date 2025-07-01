@@ -2,6 +2,7 @@
 
 ![Spotify Logo](https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/106b4dfcf7c53afce67634b09d2e8f2fae02e91c/spotify_logo.jpg)
 
+##Dataset used https://github.com/Kunal2026mnit/Advanced-SQL-Project-on-Spotify/blob/20e9853bf75644f9dcc8809c74868174c70018ed/cleaned_dataset.csv
 ## Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
 
