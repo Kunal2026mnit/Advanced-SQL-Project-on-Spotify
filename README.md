@@ -96,7 +96,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
        from spotify
        group by artist
        order by 2 desc;
-       ```
+    ```
 
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
