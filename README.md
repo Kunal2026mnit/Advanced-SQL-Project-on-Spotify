@@ -89,14 +89,14 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       where album_type = 'single';
       ```
 5. **Count the total number of tracks by each artist.**
-       ```sql
+   ```sql
        select 
       artist,--1
       count(*) as total_no_of_songs--2
       from spotify
       group by artist
       order by 2 desc;
-      ```
+   ```
 
 **Medium Level**
 1. **Calculate the average danceability of tracks in each album.**
@@ -135,7 +135,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
       order by 3 desc;
       ```
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
-       ```sql
+```sql
        SELECT * FROM
        (select track,
        coalesce(sum(case when most_played_on = 'Youtube' then stream end),0) as streamed_on_youtube,
@@ -146,7 +146,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
        WHERE streamed_spotify > streamed_on_youtube
        AND 
        streamed_on_youtube<> 0;
-   ```
+```
 
 **Advanced Level**
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
@@ -170,7 +170,8 @@ where liveness > (select avg(liveness) from spotify)
 order by 3 desc;
 ```
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
-   ```sqlwith T1 as 
+```sql
+with T1 as 
 (
 select album,--1
 max(energy) as highest_energy,
@@ -181,9 +182,9 @@ select album,
 highest_energy-lowest_energy as energy_diff
 from T1
 order by 2 desc;
-    ```   
+```   
 4. **Find tracks where the energy-to-liveness ratio is greater than 1.2.**
-      ```sql
+```sql
       with T2 as
 (with T1 as 
 (select track, sum(energy) as sum_energy,
@@ -198,16 +199,16 @@ select track, ratio
 from T2
 where ratio > 1.2
 order by 2;
-    ```
+```
 5. **Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.**
-      ```sql
+```sql
       SELECT
     track,
     views,
     SUM(likes) OVER (ORDER BY views desc) AS cumulative_likes
 FROM
     spotify;
-    ```
+```
 
 
 
